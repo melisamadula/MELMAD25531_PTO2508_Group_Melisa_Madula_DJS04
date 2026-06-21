@@ -15,7 +15,7 @@ import styles from "./App.module.css";
  * Handles data fetching and layout composition.
  */
 export default function App() {
-    const [podcast, setPodcasts] = useState([]);
+    const [podcasts, setPodcasts] = useState([]);
     const [loading, setLoading] = useState(true);
     const [error, setError] = useState(null);
 

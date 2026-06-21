@@ -1,5 +1,7 @@
 import { useContext } from "react";
 import PodcastCard from "./PodcastCard";
+import { PodcastContext } from "../context/PodcastContext";
+import styles from "./PodcastGrid.module.css";
 
 /**
  * Displays a grid layout of podcast preview cards. Each card includes
@@ -17,7 +19,7 @@ export default function PodcastGrid({ genres }) {
     const { podcasts } = useContext(PodcastContext);
     if (!podcasts.length) {
         return (
-            <p className={StyleSheet.noResults}>
+            <p className={styles.noResults}>
                 No podcast match your search or filters.
             </p>
         );
@@ -30,5 +32,5 @@ export default function PodcastGrid({ genres }) {
                 ))}
             </div>
         </>
-     );
+    );
 }
