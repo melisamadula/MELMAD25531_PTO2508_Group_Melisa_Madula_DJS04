@@ -2,6 +2,14 @@ import { useContext } from "react";
 import { PodcastContext } from "../context/PodcastContext";
 import styles from "./Pagination.module.css";
 
+/**
+ * A pagination control component that allows users to navigate through pages of podcasts.
+ * Consumes state directly from {@link PodcastContext}.
+ * 
+ * @component
+ * @requires PodcastContext
+ * @returns {JSX.Element|null} The pagination UI controls, or null if there is only 1 page or fewer.
+ */
 export default function Pagination() {
   const { page, setPage, totalPages } = useContext(PodcastContext);
 
