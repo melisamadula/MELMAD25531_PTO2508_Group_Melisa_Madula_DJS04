@@ -1,4 +1,5 @@
 import { formatDate } from "../utils/formatDate";
+import styles from "./PodcastCard.module.css";
 
 /**
  * Renders a single podcast preview card with image, title, number of seasons,
@@ -32,7 +33,9 @@ export default function PodcastCard({ podcast, genres }) {
       <h3>{podcast.title}</h3>
       <p className={styles.seasons}>{podcast.seasons} seasons</p>
       <div className={styles.tags}>{genreSpans}</div>
-      <p className={styles.updatedText}>Updated {formatDate(podcast.updated)}</p>
+      <p className={styles.updatedText}>
+        Updated {formatDate(podcast.updated)}
+      </p>
     </div>
   );
 }
